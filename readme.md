@@ -1,4 +1,4 @@
-# Decimal to Binary
+# Python Converter Decimal and Binary
 A basic decimal to binary converter that is built in python
 
 # code 
