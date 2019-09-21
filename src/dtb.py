@@ -11,7 +11,7 @@ def decimalToBinary(num):
         nb = b.rstrip("0")
         return "\nNumber: " + str(nu) + "\nBinary: " + str(nb[::-1]) + "\n"
     else:
-        return "Error: not an int or number can be presented due to small bit size"
+        return "Error: not an int"
 
 for b in range(1, 100):
     print(decimalToBinary(b))
