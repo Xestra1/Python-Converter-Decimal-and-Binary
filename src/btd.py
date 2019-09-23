@@ -1,5 +1,3 @@
-import math
-
 def binaryToDecimal(binary):
     # checks if its a int
     if (binary > 0):
@@ -19,6 +17,8 @@ def binaryToDecimal(binary):
             # code for 0
             elif (int(x) == 0):
                 p += 1
-        return "\nNumber: " + str(n) + "\nBinary: " + str(bi) + "\n"
+        print("\nNumber: " + str(n) + "\nBinary: " + str(bi) + "\n")
+        return n
     else:
-        return "Error: not an int"
+        print("Error: not an int")
+        raise
