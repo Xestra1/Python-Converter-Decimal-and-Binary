@@ -1,4 +1,3 @@
-import math
 
 def decimalToBinary(num):
     # checks if int
@@ -15,9 +14,14 @@ def decimalToBinary(num):
             b = b + str(math.floor(t))
         # strips the other 0s
         nb = b.rstrip("0")
-        return "\nNumber: " + str(nu) + "\nBinary: " + str(nb[::-1]) + "\n"
+        print("\nNumber: " + str(nu) + "\nBinary: " + str(nb[::-1]) + "\n")
+        return nu
     else:
-        return "Error: not an int"
+        print("Error: not an int")
+        raise
 
+# I don't know what's the purpose of this so I'm just gonna comment it out.        
+"""
 for b in range(1, 100):
     print(decimalToBinary(b))
+"""
