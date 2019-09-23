@@ -1,4 +1,4 @@
-def binaryToDecimal(binary):
+def binaryToDecimal(binary, tf):
     # checks if its a int
     if (binary > 0):
         # used for return statement
@@ -17,8 +17,20 @@ def binaryToDecimal(binary):
             # code for 0
             elif (int(x) == 0):
                 p += 1
-        print("\nNumber: " + str(n) + "\nBinary: " + str(bi) + "\n")
-        return n
+        if (tf == True):
+            return "\nNumber: " + str(n) + "\nBinary: " + str(bi) + "\n"
+        elif (tf == False):
+            return n
+        else:
+            return bi, n
     else:
         print("Error: not an int")
         raise
+
+# Testing
+print(binaryToDecimal(1010001, 1)) # returns 81
+
+# EXAMPLE
+#    binary number - returns (1 or True) nice formated version or (0 or False) just the number 
+#                 ↓  ↓
+# binaryToDecimal(n, 1)
