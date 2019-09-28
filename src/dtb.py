@@ -28,7 +28,7 @@ def decimalToBinary(num, tf):
         raise
 
 # This is for testing
-for b in range(1, 20):
+for b in range(1, 200, 2):
     print(decimalToBinary(b, 1))
 
 # EXAMPLE
