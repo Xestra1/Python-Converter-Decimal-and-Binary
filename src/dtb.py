@@ -29,7 +29,7 @@ def decimalToBinary(num, tf):
 
 # This is for testing
 for b in range(1, 200, 2):
-    print(decimalToBinary(b, 1))
+    print(decimalToBinary(b, 1)) # returns a bunch of numbers in binary and decimal
 
 # EXAMPLE
 #    decimal number - returns (1 or True) nice formated version or (0 or False) just the binary 
