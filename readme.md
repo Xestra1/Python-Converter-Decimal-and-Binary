@@ -1,7 +1,13 @@
 # Python Converter Decimal and Binary
 A basic decimal to binary converter that is built in python
 
-## decimal to binary
+## using the inputs and outputs
+Open input.txt and put in your binary or decimal numbers. Then, run main.py and answer the inputs. To look at formating options look at the README.md on github. dtb is decimal to binary and btd is binary to decimal.
+
+## functions
+### decimal to binary
+The files for this code can be found in the src and functions files.
+
 ```python
 # EXAMPLE
 #    decimal number - returns (1 or True) nice formated version or (0 or False) just the binary 
@@ -30,7 +36,7 @@ def decimalToBinary(num, tf):
         raise
 ```
 
-## binary to decimal
+### binary to decimal
 ```python
 # EXAMPLE
 #    binary number - returns (1 or True) nice formated version or (0 or False) just the number 
