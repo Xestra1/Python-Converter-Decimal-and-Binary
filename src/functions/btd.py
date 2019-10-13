@@ -25,7 +25,6 @@ def binaryToDecimal(binary, tf):
             return bi, n
     else:
         print("Error: not an int")
-        raise
 
 # Testing
 print(binaryToDecimal(1010001, 1)) # returns 81

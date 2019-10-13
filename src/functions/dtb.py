@@ -9,12 +9,16 @@ def decimalToBinary(num, tf):
         b = ""
         # goes through the number
         for x in range(num):
-            # takes the reminder
-            t = num % 2
-            # divdes by 2
-            num /= 2
-            # the binary
-            b = b + str(math.floor(t))
+            # makes it run super fast
+            if num > 0.9:
+                # takes the reminder
+                t = num % 2
+                # divdes by 2
+                num /= 2
+                # the binary
+                b = b + str(math.floor(t))
+            else:
+                break
         # strips the other 0s
         nb = b.rstrip("0")
         if (tf == True):
@@ -25,7 +29,6 @@ def decimalToBinary(num, tf):
             return nu, int(nb)
     else:
         print("Error: not an int")
-        raise
 
 # This is for testing
 for b in range(1, 200, 2):
