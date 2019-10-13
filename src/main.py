@@ -1,38 +1,37 @@
 from timeit import default_timer as timer
 import converter
 
-def dtbconverter(formating=2, inputFile="input.txt", outputFile="output.txt"):
+def dtbconverter(inputFile="input.txt", outputFile="output.txt"):
     numbers = []
     with open(inputFile) as input_text_file:
         for line in input_text_file.readlines():
             numbers.append(int(str(line).strip("\n")))
     with open(outputFile, 'a') as output_text_file:
         for num in numbers:
-            output_text_file.write(str(converter.decimalToBinary(num, formating)) + '\n')
+            output_text_file.write(str(converter.decimalToBinary(num)) + '\n')
 
-def btdconverter(formating=2, inputFile="input.txt", outputFile="output.txt"):
+def btdconverter(inputFile="input.txt", outputFile="output.txt"):
     numbers = []
     with open(inputFile) as input_text_file:
         for line in input_text_file.readlines():
             numbers.append(int(str(line).strip("\n")))
     with open(outputFile, 'a') as output_text_file:
         for num in numbers:
-            output_text_file.write(str(converter.binaryToDecimal(num, formating)) + '\n')
+            output_text_file.write(str(converter.binaryToDecimal(num)) + '\n')
 
 print('--------------------------------------')
 print('PYTHON BINARY AND DECIMAL CONVERTER')
 print('--------------------------------------')
-print('Usage: Open input.txt and put in your binary or decimal numbers. Then, Answer the inputs. To look at formating options look at the README.md on github. dtb is decimal to binary and btd is binary to decimal.')
+print('Usage: Open input.txt and put in your binary or decimal numbers. Then, Answer the input(s). dtb is decimal to binary and btd is binary to decimal.')
 typeOfConverter = input('What type of converter (dtb or btd): ')
-typeOfFormat = input('What type of format (0, 1, 2) default is 2: ')
 
 start = timer()
 
 if (typeOfConverter == 'dtb'):
-    dtbconverter(typeOfFormat)
+    dtbconverter()
 elif (typeOfConverter == 'btd'):
-    btdconverter(typeOfFormat)
+    btdconverter()
 
 end = timer()
 print('File Generated!')
-print('Time taken to generate: ' + str(end - start))
+print('Time taken to generate: ' + str(round(end - start, 4)))

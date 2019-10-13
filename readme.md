@@ -2,7 +2,24 @@
 A basic decimal to binary converter that is built in python
 
 ## using the inputs and outputs
-Open input.txt and put in your binary or decimal numbers. Then, run main.py and answer the inputs. To look at formating options look at the README.md on github. dtb is decimal to binary and btd is binary to decimal.
+Open input.txt and put in your binary or decimal numbers. Then, Answer the input(s). dtb is decimal to binary and btd is binary to decimal.
+
+## Benchmarking
+- specs
+    - I5 8600k
+    - 32GB of ram
+- 1-10
+    - 0.0050 seconds - B-D
+    - 0.0018 seconds - D-B - Before optimizations
+    - 0.0018 seconds - D-B - After optimizations
+- 1-100
+    - 0.0025 seconds - B-D
+    - 0.0044 seconds - D-B - Before optimizations
+    - 0.0024 seconds - D-B - After optimizations
+- 1-10000
+    - 0.0816 seconds - B-D
+    - 47.7646 seconds - D-B - Before optimizations
+    - 0.093 seconds - D-B - After optimizations
 
 ## functions
 ### decimal to binary
