@@ -83,5 +83,4 @@ def binaryToDecimal(binary, tf):
             return bi, n
     else:
         print("Error: not an int")
-        raise
 ```
