@@ -38,9 +38,12 @@ def decimalToBinary(num, tf):
         nu = num
         b = ""
         for x in range(num):
-            t = num % 2
-            num /= 2
-            b = b + str(math.floor(t))
+            if num > 0.9:
+                t = num % 2
+                num /= 2
+                b = b + str(math.floor(t))
+            else:
+                break
         nb = b.rstrip("0")
         if (tf == True):
             return "\nNumber: " + str(nu) + "\nBinary: " + str(nb[::-1]) + "\n"
@@ -50,7 +53,6 @@ def decimalToBinary(num, tf):
             return nu, int(nb)
     else:
         print("Error: not an int")
-        raise
 ```
 
 ### binary to decimal
